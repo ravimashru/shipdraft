@@ -39,10 +39,10 @@ class HomePageTests(TestCase):
         self.assertEquals(response.status_code, 200)
         self.assertTemplateUsed(response, 'index.html')
 
-    def test_home_page_contains_correct_html(self):
-        logger.info('testing index contains title tag...')
-        response = self.client.get('/')
-        self.assertContains(response, '<title>DataTau - Hacker News Clone - Data Science Newsboard</title>')
+    # def test_home_page_contains_correct_html(self):
+    #     logger.info('testing index contains title tag...')
+    #     response = self.client.get('/')
+    #     self.assertContains(response, '<title>DataTau - Hacker News Clone - Data Science Newsboard</title>')
 
     def test_home_page_does_not_contain_incorrect_html(self):
         logger.info('testing index does not contains invalid html...')
