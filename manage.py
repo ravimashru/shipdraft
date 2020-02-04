@@ -5,7 +5,13 @@ import sys
 
 
 def main():
-    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'shipdraft.settings')
+
+    if sys.argv[-1] == 'dev':
+        os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'shipdraft.settings')
+    else:
+        if sys.argv[-1] != 'prod': sys.argv.append('prod')
+        os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'shipdraft.settings_prod')
+        
     try:
         from django.core.management import execute_from_command_line
     except ImportError as exc:
