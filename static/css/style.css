@@ -162,6 +162,10 @@ a:visited {
     color: #dddddd;
 }
 
+.pagetop a {
+    color: white;
+}
+
 .pagetop a:visited {
     color: white;
 }
