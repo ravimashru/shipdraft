@@ -63,9 +63,9 @@ class Post(models.Model):
         if not self.insert_date:
             self.insert_date = timezone.now()
 
-        if 'Show DT' in self.title:
+        if self.title.lower().startswith('show'):
             self.show_dt = True
-        if 'Ask DT' in self.title:
+        if self.title.lower().startswith('ask'):
             self.ask_dt = True
 
         super().save(*args, **kwargs)
