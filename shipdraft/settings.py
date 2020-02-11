@@ -130,3 +130,5 @@ HOTTEST_DAY_LIMIT = 15
 
 # Gravity (used by news ranking algorithm)
 G = 1.8
+
+TOP_N_ITEMS = 10
